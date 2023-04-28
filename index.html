@@ -19,6 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -39,6 +40,11 @@
             </li>
           </ul>
         </nav>
+        <button class="menu-open-btn" data-menu-open type="button"> 
+          <svg class="mobile-menu-open_icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
         <address class="address">
           <ul class="address-list list">
             <li class="address-item">
@@ -54,14 +60,78 @@
           </ul>
         </address>
       </div>
+       <div class="mobile-menu is-hidden " data-menu>
+        <button type="button" class="mobile-menu-close-btn" data-menu-close>
+          <svg class="mobile-menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-modal-close-black"></use>
+          </svg>
+        </button>
+        <div class="mobile-link">
+          <ul class="mobile-list list">
+            <li class="mobile-item">
+              <a href="./index.html" class="mobile-link link current">Studio</a>
+            </li>
+            <li class="mobile-item">
+              <a href="./portfolio.html" class="mobile-link link">Portfolio</a>
+            </li>
+            <li class="mobile-item">
+              <a href="" class="mobile-link link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-address">
+          <ul class="mobile-address-list list">
+            <li class="mobile-address-item">
+              <a href="tel:+110001111111" class="mobile-address-link link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-address-item">
+              <a href="mailto:info@devstudio.com" class="mobile-email-link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <div>
+            <ul class="mobile-social-list list">
+              <li class="mobile-social-item">
+                <a href="" class="mobile-social-link">
+                  <svg class="mobile-social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a href="" class="mobile-social-link">
+                  <svg class="mobile-social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a href="" class="mobile-social-link">
+                  <svg class="mobile-social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a href="" class="mobile-social-link">
+                  <svg class="mobile-social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="hero">
-        <div class="container">
-          <div class="hero-container">
+        <div class="container hero-container">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
             <button type="button" class="hero-btn animation-btn" data-modal-open>Order Service</button>
-          </div>
         </div>
       </section>
       <section class="feature">
@@ -157,25 +227,49 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="team">
+      </section> 
+       <!-- <section class="team">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img
-                src="./images/person.jpg"
-                alt="person"
-                width="264"
-                height="260"
-              />
+              <picture class="bottom-image">
+                <source
+                  srcset="
+                    ./images/mark-guerrero@1x-desktop.jpg 1x,
+                    ./images/mark-guerrero@2x-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mark-guerrero@1x-tab.jpg 1x,
+                    ./images/mark-guerrero@2x-tab.jpg 2x
+                  "
+                  media="(min-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/mark-guerrero-mob@1x.jpg 1x,
+                    ./images/mark-guerrero-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/product.jpg"
+                  alt="Mark_Guerrero"
+                  class="picture-bottom-item"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="team-text-style">
                 <h3 class="team-title-three">Mark Guerrero</h3>
                 <p class="team-paragraph">Product Designer</p>
                 <ul class="team-network list">
                   <li class="team-network-item">
                     <a href="" class="social-network-link link">
-                      <svg class="social-network-icon"  >
+                      <svg class="social-network-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -202,22 +296,46 @@
                     </a>
                   </li>
                 </ul>
-              </div >
+              </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/person2.jpg"
-                alt="person"
-                width="264"
-                height="260"
-              />
+              <picture class="bottom-image">
+                <source
+                  srcset="
+                    ./images/tom-ford@1x-desktop.jpg 1x,
+                    ./images/tom-ford@2x-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tom-ford@1x-tab.jpg 1x,
+                    ./images/tom-ford@2x-tab.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/tom-ford-mob@1x.jpg 1x,
+                    ./images/tom-ford-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/frontend.jpg"
+                  alt="Tom_Ford"
+                  class="picture-bottom-item"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="team-text-style">
                 <h3 class="team-title-three">Tom Ford</h3>
                 <p class="team-paragraph">Frontend Developer</p>
                 <ul class="team-network list">
                   <li class="team-network-item">
                     <a href="" class="social-network-link link">
-                      <svg class="social-network-icon"  >
+                      <svg class="social-network-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -244,22 +362,46 @@
                     </a>
                   </li>
                 </ul>
-              </div >
+              </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/person3.jpg"
-                alt="person"
-                width="264"
-                height="260"
-              />
+              <picture class="bottom-image">
+                <source
+                  srcset="
+                    ./images/camila-garcia@1x-desktop.jpg 1x,
+                    ./images/camila-garcia@2x-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/camila-garcia@1x-tab.jpg 1x,
+                    ./images/camila-garcia@2x-tab.jpg 2x
+                  "
+                  media="(min-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/camila-garcia-mob@1x.jpg 1x,
+                    ./images/camila-garcia-mob@2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/marketing.jpg"
+                  alt="Camila_Garcia"
+                  class="picture-bottom-item"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="team-text-style">
                 <h3 class="team-title-three">Camila Garcia</h3>
                 <p class="team-paragraph">Marketing</p>
                 <ul class="team-network list">
                   <li class="team-network-item">
                     <a href="" class="social-network-link link">
-                      <svg class="social-network-icon"  >
+                      <svg class="social-network-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -286,22 +428,46 @@
                     </a>
                   </li>
                 </ul>
-              </div >
+              </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/person4.jpg"
-                alt="person"
-                width="264"
-                height="260"
-              />
+              <picture class="bottom-image">
+                <source
+                  srcset="
+                    ./images/daniel-wilson@1x-desktop.jpg 1x,
+                    ./images/daniel-wilson@2x-desktop.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/daniel-wilson@1x-tab.jpg 1x,
+                    ./images/daniel-wilson@2x-tab.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/daniel-wilson@1x-mob.jpg 1x,
+                    ./images/daniel-wilson@2x-mob.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/ui-desinger.jpg"
+                  alt=" Daniel_Wilson"
+                  class="picture-bottom-item"
+                  width="264"
+                  height="260"
+                />
+              </picture>
               <div class="team-text-style">
                 <h3 class="team-title-three">Daniel Wilson</h3>
                 <p class="team-paragraph">UI Designer</p>
                 <ul class="team-network list">
                   <li class="team-network-item">
                     <a href="" class="social-network-link link">
-                      <svg class="social-network-icon"  >
+                      <svg class="social-network-icon">
                         <use href="./images/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
@@ -328,11 +494,11 @@
                     </a>
                   </li>
                 </ul>
-              </div >
+              </div>
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
       <section class="customers ">
         <div class="container customers-box">
           <h2 class="customers-title">Customers</h2>
@@ -444,7 +610,7 @@
            </form>
         </div >
       </div>
-    </footer>
+    </footer>-->
     <div class="backdrop is-hidden" data-modal> 
       <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
@@ -497,7 +663,8 @@
           <button type="button" class="modal-form-btn modal-animation-btn">Send</button>
         </form>
       </div>
-    </div>
+    </div> 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
